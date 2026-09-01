@@ -464,6 +464,7 @@ balm-code:kommuNetz a owl:ObjectProperty ;
     rdfs:range balm-code:KommuNetz .
 
 gdi: a owl:Ontology ;
+    owl:versionInfo "1.0.0" ;
     rdfs:label "Radverkehr ontology"@de,
         "Cycling network ontology"@en ;
     dcterms:title "Radverkehr Ontologie (GDI-DE)"@de,

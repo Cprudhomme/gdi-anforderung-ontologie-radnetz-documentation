@@ -51,7 +51,7 @@ jobs:
       - name: Generate Documentation with WIDOCO
         run: |
           mkdir -p docs
-          java -jar .widoco/bin/widoco.jar \
+          java -Djava.awt.headless=true -jar .widoco/bin/widoco.jar \
             -ontFile radnetz_ontology.ttl \
             -outFolder docs \
             -confFile .widoco/widoco.properties \

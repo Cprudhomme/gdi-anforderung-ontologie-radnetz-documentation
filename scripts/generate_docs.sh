@@ -39,7 +39,7 @@ fi
 echo "Generating WIDOCO documentation for radnetz_ontology.ttl..."
 mkdir -p "${OUTPUT_DIR}"
 
-java -jar "${WIDOCO_JAR}" \
+java -Djava.awt.headless=true -jar "${WIDOCO_JAR}" \
   -ontFile "${ONTOLOGY_FILE}" \
   -outFolder "${OUTPUT_DIR}" \
   -confFile "${CONFIG_FILE}" \
