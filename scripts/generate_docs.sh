@@ -48,6 +48,12 @@ java -Djava.awt.headless=true -jar "${WIDOCO_JAR}" \
   -lang de-en \
   -includeAnnotationProperties
 
+# If Widoco generated output in a 'doc' subfolder (slash ontologies),
+# bring the files to the root of output folder while keeping doc/ intact
+if [ -d "${OUTPUT_DIR}/doc" ]; then
+  cp -r "${OUTPUT_DIR}/doc/"* "${OUTPUT_DIR}/"
+fi
+
 # Ensure index.html exists
 if [ ! -f "${OUTPUT_DIR}/index.html" ]; then
   if [ -f "${OUTPUT_DIR}/index-de.html" ]; then

@@ -60,6 +60,12 @@ jobs:
             -lang de-en \
             -includeAnnotationProperties
 
+          # If Widoco generated output in a 'doc' subfolder (slash ontologies),
+          # bring the files to the root of docs/ while keeping doc/ intact
+          if [ -d docs/doc ]; then
+            cp -r docs/doc/* docs/
+          fi
+
           # Ensure index.html exists for GitHub Pages root
           if [ ! -f docs/index.html ]; then
             if [ -f docs/index-de.html ]; then
