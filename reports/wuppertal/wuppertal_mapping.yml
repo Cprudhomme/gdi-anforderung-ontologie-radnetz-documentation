@@ -1,0 +1,97 @@
+prefixes:
+  gdi: "https://registry.gdi-de.org/up3/ontology/"
+  ex-nw: "https://registry.gdi-de.org/de.nw/radnetz/instances/"
+  balm: "https://registry.gdi-de.org/id/de.bund.balm.radnetz/"
+  balm-code: "https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/"
+  geosparql: "http://www.opengis.net/ont/geosparql#"
+  gml: "http://www.opengis.net/gml/3.2/"
+  gml-exr: "http://www.opengis.net/gml/3.3/exr#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+
+mappings:
+  wuppertal_sections:
+    sources:
+      - ['GIS-onto-bkg-i3_work/data/inputs/Radwege_wuppertal_EPSG4326_JSON.json~jsonpath', '$.features[*]']
+    s:
+      function: spatial_functions:get_wuppertal_section_uri
+      parameters:
+        - [spatial_functions:properties, $(properties)]
+        - [spatial_functions:index, $(__index)]
+    po:
+      - [a, owl:NamedIndividual]
+      - [a, geosparql:Feature]
+      - [a, :Streckenabschnitt_optional]
+      - p: :quell-ID
+        o: $(properties.STR_NR)
+        datatype: xsd:string
+      - p: :strecken-ID
+        o:
+          function: spatial_functions:get_wuppertal_section_id
+          parameters:
+            - [spatial_functions:properties, $(properties)]
+            - [spatial_functions:index, $(__index)]
+        datatype: xsd:string
+      - p: :beginntBeiKnoten
+        o:
+          function: spatial_functions:get_wuppertal_start_node_uri
+          parameters:
+            - [spatial_functions:geometry, $(geometry)]
+            - [spatial_functions:properties, $(properties)]
+        type: iri
+      - p: :endetBeiKnoten
+        o:
+          function: spatial_functions:get_wuppertal_end_node_uri
+          parameters:
+            - [spatial_functions:geometry, $(geometry)]
+            - [spatial_functions:properties, $(properties)]
+        type: iri
+      - p: :geometrieAbschnitt
+        o:
+          function: spatial_functions:get_wuppertal_section_geom_uri
+          parameters:
+            - [spatial_functions:properties, $(properties)]
+            - [spatial_functions:index, $(__index)]
+        type: iri
+      - p: geosparql:hasGeometry
+        o:
+          function: spatial_functions:get_wuppertal_section_geom_uri
+          parameters:
+            - [spatial_functions:properties, $(properties)]
+            - [spatial_functions:index, $(__index)]
+        type: iri
+      - p: :fuehrung
+        o:
+          function: spatial_functions:map_wuppertal_fuehrung
+          parameters:
+            - [spatial_functions:properties, $(properties)]
+        type: iri
+      - p: :licht
+        o:
+          function: spatial_functions:map_wuppertal_licht
+          parameters:
+            - [spatial_functions:properties, $(properties)]
+        type: iri
+      - p: :steigung
+        o: $(properties.STEIGUNG)
+        datatype: xsd:double
+
+  wuppertal_geometries:
+    sources:
+      - ['GIS-onto-bkg-i3_work/data/inputs/Radwege_wuppertal_EPSG4326_JSON.json~jsonpath', '$.features[*]']
+    s:
+      function: spatial_functions:get_wuppertal_section_geom_uri
+      parameters:
+        - [spatial_functions:properties, $(properties)]
+        - [spatial_functions:index, $(__index)]
+    po:
+      - [a, owl:NamedIndividual]
+      - [a, geosparql:Geometry]
+      - p: geosparql:asWKT
+        o:
+          function: spatial_functions:extract_wkt
+          parameters:
+            - [spatial_functions:geometry, $(geometry)]
+        datatype: geosparql:wktLiteral
