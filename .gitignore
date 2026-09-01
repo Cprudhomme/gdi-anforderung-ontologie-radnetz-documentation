@@ -1,0 +1,10 @@
+# WIDOCO downloaded JAR
+.widoco/bin/
+
+# Local docs output (built & published via GitHub Actions)
+docs/
+
+# OS and Editor files
+.DS_Store
+*.swp
+*.bak

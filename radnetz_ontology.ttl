@@ -1,0 +1,897 @@
+@prefix balm-code: <https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/> .
+@prefix gdi: <https://registry.gdi-de.org/up3/ontology/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix gml: <http://www.opengis.net/gml/3.2/> .
+@prefix gml-exr: <http://www.opengis.net/gml/3.3/exr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+gml:curvePropertyType a owl:ObjectProperty ;
+    rdfs:label "CurvePropertyType" .
+
+gml:description a owl:AnnotationProperty .
+
+gml:id a owl:AnnotationProperty .
+
+gml:pointPropertyType a owl:ObjectProperty ;
+    rdfs:label "PointPropertyType" .
+
+geosparql:Geometry a owl:Class ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+geosparql:asWKT a owl:DatatypeProperty .
+
+geosparql:hasGeometry a owl:ObjectProperty .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/100> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "befestigte Oberfläche"@de ;
+    gml:id "Belag_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/110> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Deckschicht aus Asphalt"@de ;
+    gml:id "Belag_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/120> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "eckschicht aus Beton"@de ;
+    gml:id "Belag_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/130> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Pflaster"@de ;
+    gml:id "Belag_4"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/131> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Betonpflaster"@de ;
+    gml:id "Belag_5"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/132> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Kopf-/Natursteinpflaster"@de ;
+    gml:id "Belag_6"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/140> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Platten"@de ;
+    gml:id "Belag_7"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/141> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Betonplatten"@de ;
+    gml:id "Belag_8"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/142> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Natursteinplatten"@de ;
+    gml:id "Belag_9"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/143> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "sonstige Platten"@de ;
+    gml:id "Belag_10"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/200> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "wassergebundener Belag"@de ;
+    gml:id "Belag_11"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/201> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "feiner Splittbelag"@de ;
+    gml:id "Belag_12"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/202> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "grober Schotter"@de ;
+    gml:id "Belag_13"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/300> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "ungebundener/naturnaher Belag"@de ;
+    gml:id "Belag_14"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/400> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Holz"@de ;
+    gml:id "Belag_15"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/500> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "Metall"@de ;
+    gml:id "Belag_16"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Belag/900> a gml-exr:Belag,
+        owl:NamedIndividual ;
+    gml:description "unbekannt"@de ;
+    gml:id "Belag_17"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Bewertung/1> a gml-exr:Bewertung,
+        owl:NamedIndividual ;
+    rdfs:label "Bewertung_1"@de ;
+    gml:description "neuwertig / sehr guter Zustand"@de ;
+    gml:id "Bewertung_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Bewertung/2> a gml-exr:Bewertung,
+        owl:NamedIndividual ;
+    gml:description "guter Zustand"@de ;
+    gml:id "Bewertung_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Bewertung/3> a gml-exr:Bewertung,
+        owl:NamedIndividual ;
+    gml:description "mittlerer Zustand"@de ;
+    gml:id "Bewertung_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Bewertung/4> a gml-exr:Bewertung,
+        owl:NamedIndividual ;
+    gml:description "unzureichender Zustand /Anlass zur Beobachtung/Analyse"@de ;
+    gml:id "Bewertung_4"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Bewertung/5> a gml-exr:Bewertung,
+        owl:NamedIndividual ;
+    gml:description "unbefahrbar"@de ;
+    gml:id "Bewertung_5"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Bewertung/6> a gml-exr:Bewertung,
+        owl:NamedIndividual ;
+    gml:description "nicht bewertet"@de ;
+    gml:id "Bewertung_6"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Breite_Klasse/01> a gml-exr:Breite_Klasse,
+        owl:NamedIndividual ;
+    gml:description "< 1,25 m"@de ;
+    gml:id "Breite_Klasse_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Breite_Klasse/02> a gml-exr:Breite_Klasse,
+        owl:NamedIndividual ;
+    gml:description "1,26 – 2,49 m"@de ;
+    gml:id "Breite_Klasse_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Breite_Klasse/03> a gml-exr:Breite_Klasse,
+        owl:NamedIndividual ;
+    gml:description "> 2,50 m"@de ;
+    gml:id "Breite_Klasse_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/1> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 1: Nordseeküstenroute"@de ;
+    gml:id "D-Route_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/10> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 10: Elbradweg"@de ;
+    gml:id "D-Route_10"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/11> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 11: Ostsee - Oberbayern"@de ;
+    gml:id "D-Route_11"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/12> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 12: Oder-Neiße-Radweg"@de ;
+    gml:id "D-Route_12"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/2> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 2: Ostseeküstenroute"@de ;
+    gml:id "D-Route_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/3> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 3: Europaroute"@de ;
+    gml:id "D-Route_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/4> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 4: Mittelland-Route"@de ;
+    gml:id "D-Route_4"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/5> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 5: Saar-Mosel-Main"@de ;
+    gml:id "D-Route_5"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/6> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 6: Donauroute"@de ;
+    gml:id "D-Route_6"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/7> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 7: Pilgerroute"@de ;
+    gml:id "D-Route_7"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/8> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 8: Rhein-Route"@de ;
+    gml:id "D-Route_8"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/9> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "D-Route 9: Weser - Romantische"@de ;
+    gml:id "D-Route_9"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/ICT> a gml-exr:D-Route,
+        owl:NamedIndividual ;
+    gml:description "ICT: Iron-Curtail-Trail"@de ;
+    gml:id "D-Route_13"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/D-Route/RDE> a gml-exr:D-Route,
+        owl:NamedIndividual,
+        gdi:TouristenRoute ;
+    gml:description "RDE: Radweg Deutsche Einheit"@de ;
+    gml:id "D-Route_14"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/100> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Radverkehr auf Fahrbahn (Mischverkehr mit KFZ)"@de ;
+    gml:id "Fuehrung_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/101> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Fahrradstraße"@de ;
+    gml:id "Fuehrung_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/102> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Mehrzweckstreifen"@de ;
+    gml:id "Fuehrung_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/103> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Schutzstreifen"@de ;
+    gml:id "Fuehrung_4"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/104> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Radverkehr auf Fahrbahnen mit Straßenbahn"@de ;
+    gml:id "Fuehrung_5"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/105> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Spielstraße"@de ;
+    gml:id "Fuehrung_6"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/200> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Radfahrstreifen"@de ;
+    gml:id "Fuehrung_7"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/300> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "baulich angelegte Radwege"@de ;
+    gml:id "Fuehrung_8"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/301> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Einrichtungsradwege"@de ;
+    gml:id "Fuehrung_9"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/302> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Zweirichtungsradwege"@de ;
+    gml:id "Fuehrung_10"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/400> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Führung mit Fußgängerverkehr"@de ;
+    gml:id "Fuehrung_11"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/401> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "gemeinsamer Geh- und Radweg (StVO 240)"@de ;
+    gml:id "Fuehrung_12"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/402> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Führung mit Fußgängerverkehr Radfahrer frei (StVO 239)"@de ;
+    gml:id "Fuehrung_13"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/403> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Fußgängerzone"@de ;
+    gml:id "Fuehrung_14"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/404> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Gehweg (Schiebestrecke)"@de ;
+    gml:id "Fuehrung_15"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/405> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Gehweg (Radverkehr frei)"@de ;
+    gml:id "Fuehrung_16"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/500> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "sonstige Wege"@de ;
+    gml:id "Fuehrung_17"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/501> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Wirtschaftsweg"@de ;
+    gml:id "Fuehrung_18"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/502> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Forstweg"@de ;
+    gml:id "Fuehrung_19"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/503> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Feldweg"@de ;
+    gml:id "Fuehrung_20"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/504> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Deichweg"@de ;
+    gml:id "Fuehrung_21"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/505> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Betriebsweg an Bundeswasserstraßen"@de ;
+    gml:id "Fuehrung_22"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/506> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Treppe"@de ;
+    gml:id "Fuehrung_23"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/600> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "maschinenbetriebene Verbindungen"@de ;
+    gml:id "Fuehrung_24"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/601> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Fähre"@de ;
+    gml:id "Fuehrung_25"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/602> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "Schienen- bzw. Seilbahnbetrieb"@de ;
+    gml:id "Fuehrung_26"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Fuehrung/900> a gml-exr:Fuehrung,
+        owl:NamedIndividual ;
+    gml:description "unbekannt"@de ;
+    gml:id "Fuehrung_27"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/KommuNetz/100> a owl:NamedIndividual,
+        balm-code:KommuNetz ;
+    gml:description "Netze kommunaler Art"@de ;
+    gml:id "KommuNetz_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/KommuNetz/101> a owl:NamedIndividual,
+        balm-code:KommuNetz ;
+    gml:description "Kreisnetz"@de ;
+    gml:id "KommuNetz_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/KommuNetz/102> a owl:NamedIndividual,
+        balm-code:KommuNetz ;
+    gml:description "Kommunalnetz"@de ;
+    gml:id "KommuNetz_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Licht/0> a gml-exr:Licht,
+        owl:NamedIndividual ;
+    gml:description "unbeleuchtet"@de ;
+    gml:id "Licht_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Licht/1> a gml-exr:Licht,
+        owl:NamedIndividual ;
+    gml:description "beleuchtet"@de ;
+    gml:id "Licht_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Licht/2> a gml-exr:Licht,
+        owl:NamedIndividual ;
+    gml:description "Retroreflektierende Randmarkierung"@de ;
+    gml:id "Licht_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Ortslage/1> a gml-exr:Ortslage,
+        owl:NamedIndividual ;
+    gml:description "innerorts"@de ;
+    gml:id "Ortslage_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Ortslage/2> a gml-exr:Ortslage,
+        owl:NamedIndividual ;
+    gml:description "ausserorts"@de ;
+    gml:id "Ortslage_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Richtung/1> a gml-exr:Richtung,
+        owl:NamedIndividual ;
+    gml:description "beide Richtungen"@de ;
+    gml:id "Richtung_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Richtung/2> a gml-exr:Richtung,
+        owl:NamedIndividual ;
+    gml:description "in Geometrierichtung"@de ;
+    gml:id "Richtung_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Richtung/3> a gml-exr:Richtung,
+        owl:NamedIndividual ;
+    gml:description "gegen Geometrierichtung"@de ;
+    gml:id "Richtung_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Richtung/9> a gml-exr:Richtung,
+        owl:NamedIndividual ;
+    gml:description "unbekannt"@de ;
+    gml:id "Richtung_4"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/10> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "befahrbar"@de ;
+    gml:id "Status_1"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/20> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "in Bau"@de ;
+    gml:id "Status_2"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/30> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "in Planung"@de ;
+    gml:id "Status_3"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/40> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "gesperrt"@de ;
+    gml:id "Status_4"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/41> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "dauerhaft gesperrt"@de ;
+    gml:id "Status_5"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/42> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "saisonal gesperrt"@de ;
+    gml:id "Status_6"@de .
+
+<https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/Status/43> a gml-exr:Status,
+        owl:NamedIndividual ;
+    gml:description "gesperrt mit Enddatum"@de ;
+    gml:id "Status_7"@de .
+
+balm-code:kommuNetz a owl:ObjectProperty ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range balm-code:KommuNetz .
+
+gdi: a owl:Ontology ;
+    rdfs:label "Radverkehr ontology"@de,
+        "Cycling network ontology"@en ;
+    dcterms:title "Radverkehr Ontologie (GDI-DE)"@de,
+        "Cycling Network Ontology (GDI-DE)"@en ;
+    dcterms:creator "Dr. Claire Ponciano" ;
+    dc:creator "Dr. Claire Ponciano" ;
+    dcterms:description "Ontologie zur Spezifikation und Dokumentation des Radnetzes der GDI-DE und des BALM."@de,
+        "Ontology for the specification and documentation of the cycling network of GDI-DE and BALM."@en .
+
+<https://registry.gdi-de.org/up3/ontology/Baulast/1> a owl:NamedIndividual,
+        gdi:Baulast ;
+    gml:description "Bund"@de ;
+    gml:id "Baulast_1"@de .
+
+<https://registry.gdi-de.org/up3/ontology/Baulast/2> a owl:NamedIndividual,
+        gdi:Baulast ;
+    gml:description "Kreis"@de ;
+    gml:id "Baulast_2"@de .
+
+<https://registry.gdi-de.org/up3/ontology/Baulast/3> a owl:NamedIndividual,
+        gdi:Baulast ;
+    gml:description "Land"@de ;
+    gml:id "Baulast_3"@de .
+
+<https://registry.gdi-de.org/up3/ontology/Baulast/4> a owl:NamedIndividual,
+        gdi:Baulast ;
+    gml:description "Gemeinde"@de ;
+    gml:id "Baulast_4"@de .
+
+<https://registry.gdi-de.org/up3/ontology/Baulast/5> a owl:NamedIndividual,
+        gdi:Baulast ;
+    gml:description "Dritte"@de ;
+    gml:id "Baulast_5"@de .
+
+<https://registry.gdi-de.org/up3/ontology/Baulast/6> a owl:NamedIndividual,
+        gdi:Baulast ;
+    gml:description "unbekannt"@de ;
+    gml:id "Baulast_6"@de .
+
+gdi:abgehenderStreckenabschnitt a owl:ObjectProperty ;
+    rdfs:domain gdi:KnotenType ;
+    rdfs:range gdi:StreckenabschnittType ;
+    rdfs:subPropertyOf gdi:streckenabschnittPropertyType ;
+    owl:inverseOf gdi:beginntBeiKnoten .
+
+gdi:ankommenderStreckenabschnitt a owl:ObjectProperty ;
+    rdfs:domain gdi:KnotenType ;
+    rdfs:range gdi:StreckenabschnittType ;
+    rdfs:subPropertyOf gdi:streckenabschnittPropertyType ;
+    owl:inverseOf gdi:endetBeiKnoten .
+
+gdi:b-Pflicht a owl:DatatypeProperty ;
+    rdfs:label "B-Pflicht"@de,
+        "Benutzungspflicht"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:boolean .
+
+gdi:baulast a owl:ObjectProperty ;
+    rdfs:label "Baulast"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range gdi:Baulast ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_optionalPropertyType .
+
+gdi:baulast_3 a owl:DatatypeProperty ;
+    rdfs:label "Baulast_3"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:string .
+
+gdi:bewert_1 a owl:DatatypeProperty ;
+    rdfs:label "Bewert_1"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:date .
+
+gdi:bewertung a owl:ObjectProperty ;
+    rdfs:label "Bewertung"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range gml-exr:Bewertung ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_optionalPropertyType .
+
+gdi:breite a owl:DatatypeProperty ;
+    rdfs:comment "Ausmaße der erfassten Mindestbreite eines Abschnittes in Zentimeter"@de ;
+    rdfs:domain gdi:Streckenabschnitt ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_opt_prop .
+
+gdi:breite_Klasse a owl:ObjectProperty ;
+    rdfs:label "Breite_Klasse"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range gml-exr:Breite_Klasse ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_optionalPropertyType .
+
+gdi:d-Route a owl:ObjectProperty ;
+    rdfs:label "D-Route"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range gml-exr:D-Route ;
+    rdfs:subPropertyOf gdi:routePropertyType .
+
+gdi:datum a owl:DatatypeProperty ;
+    rdfs:label "Datum"@de ;
+    rdfs:domain gdi:KnotenType,
+        gdi:StreckenabschnittType ;
+    rdfs:range xsd:date .
+
+gdi:ergNetze a owl:DatatypeProperty ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:string .
+
+gdi:euroVelo a owl:DatatypeProperty ;
+    rdfs:label "EuroVelo"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:boolean .
+
+gdi:fuehrung a owl:ObjectProperty ;
+    rdfs:label "Fuehrung"@de ;
+    rdfs:domain gdi:StreckenabschnittType ;
+    rdfs:range gml-exr:Fuehrung ;
+    rdfs:subPropertyOf gdi:streckenabschnittPropertyType .
+
+gdi:geometrieAbschnitt a owl:ObjectProperty ;
+    rdfs:label "GeometrieAbschnitt"@de ;
+    rdfs:domain gdi:StreckenabschnittType ;
+    rdfs:subPropertyOf gdi:streckenabschnittPropertyType .
+
+gdi:geometrieKnoten a owl:ObjectProperty ;
+    rdfs:label "GeometrieKnoten"@de ;
+    rdfs:domain gdi:KnotenType ;
+    rdfs:subPropertyOf gdi:knotenPropertyType .
+
+gdi:hasAssociationAttribute a owl:ObjectProperty ;
+    rdfs:range gml:AssociationAttributeGroup .
+
+gdi:hasKnoten a owl:ObjectProperty ;
+    rdfs:range gdi:Knoten .
+
+gdi:hasOwnershipAttribute a owl:ObjectProperty ;
+    rdfs:range gml:OwnershipAttributeGroup .
+
+gdi:hasStreckenabschnitt_optional a owl:ObjectProperty ;
+    rdfs:domain gdi:Route ;
+    rdfs:range gdi:Streckenabschnitt_optional .
+
+gdi:hasWegweisung a owl:ObjectProperty ;
+    rdfs:domain gdi:Knoten ;
+    rdfs:range gdi:Wegweisung .
+
+gdi:hoehe a owl:DatatypeProperty ;
+    rdfs:label "Hoehe"@de ;
+    rdfs:comment "Hoehe (in Metern über dem Meeresspiegel)"@de ;
+    rdfs:domain gdi:KnotenType ;
+    rdfs:range xsd:double .
+
+gdi:knoten-ID a owl:DatatypeProperty ;
+    rdfs:label "Knoten-ID"@de ;
+    rdfs:domain gdi:KnotenType ;
+    rdfs:range xsd:string .
+
+gdi:knotennetz-ID a owl:DatatypeProperty ;
+    rdfs:label "Knotennetz-ID"@de ;
+    rdfs:domain gdi:WegweisungType ;
+    rdfs:range xsd:string .
+
+gdi:kommuNetz a owl:DatatypeProperty ;
+    rdfs:label "KommuNetz"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:string .
+
+gdi:laenge a owl:DatatypeProperty ;
+    rdfs:comment "Länge des Streckenabschnittes in Metern"@de ;
+    rdfs:domain gdi:Streckenabschnitt ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_prop .
+
+gdi:landesnetz a owl:DatatypeProperty ;
+    rdfs:label "Landesnetz"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:boolean .
+
+gdi:lebenszeitintervallAnfang a owl:DatatypeProperty ;
+    rdfs:domain gdi:KnotenType,
+        gdi:RouteType,
+        gdi:StreckenabschnittType,
+        gdi:WegweisungType ;
+    rdfs:range xsd:dateTime .
+
+gdi:lebenszeitintervallEnde a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain gdi:KnotenType,
+        gdi:RouteType,
+        gdi:StreckenabschnittType,
+        gdi:WegweisungType ;
+    rdfs:range xsd:dateTime .
+
+gdi:licht a owl:ObjectProperty ;
+    rdfs:label "Licht"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range gml-exr:Licht ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_optionalPropertyType .
+
+gdi:name a owl:DatatypeProperty ;
+    rdfs:label "Name"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:string .
+
+gdi:orslage a owl:ObjectProperty ;
+    rdfs:label "Orslage"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range gml-exr:Ortslage ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_optionalPropertyType .
+
+gdi:quell-ID a owl:DatatypeProperty ;
+    rdfs:label "Quell-ID"@de ;
+    rdfs:domain gdi:KnotenType,
+        gdi:StreckenabschnittType ;
+    rdfs:range xsd:string .
+
+gdi:radnetz_D a owl:DatatypeProperty ;
+    rdfs:label "Radnetz_D"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:boolean .
+
+gdi:richtung a owl:ObjectProperty ;
+    rdfs:label "Richtung"@de ;
+    rdfs:domain gdi:StreckenabschnittType ;
+    rdfs:range gml-exr:Richtung ;
+    rdfs:subPropertyOf gdi:streckenabschnittPropertyType .
+
+gdi:routen-ID a owl:DatatypeProperty ;
+    rdfs:label "Routen-ID"@de ;
+    rdfs:domain gdi:RouteType ;
+    rdfs:range xsd:string .
+
+gdi:schild-ID a owl:DatatypeProperty ;
+    rdfs:label "Schild-ID"@de ;
+    rdfs:domain gdi:WegweisungType ;
+    rdfs:range xsd:string .
+
+gdi:status a owl:ObjectProperty ;
+    rdfs:label "Status"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range gml-exr:Status ;
+    rdfs:subPropertyOf gdi:streckenabschnitt_optionalPropertyType .
+
+gdi:status_1 a owl:DatatypeProperty ;
+    rdfs:label "Status_1"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:string .
+
+gdi:status_2 a owl:DatatypeProperty ;
+    rdfs:label "Status_2"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:date .
+
+gdi:steigung a owl:DatatypeProperty ;
+    rdfs:label "Steigung"@de ;
+    rdfs:comment "Gradienten- / Neigungsprozentsatz des Streckenabschnitt zwischen sein Anfangs- und End- Knoten"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:double .
+
+gdi:str_name a owl:DatatypeProperty ;
+    rdfs:label "Str_name"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:string .
+
+gdi:strecken-ID a owl:DatatypeProperty ;
+    rdfs:label "Strecken-ID"@de ;
+    rdfs:domain gdi:StreckenabschnittType ;
+    rdfs:range xsd:string .
+
+gdi:tempo a owl:DatatypeProperty ;
+    rdfs:label "Tempo"@de ;
+    rdfs:domain gdi:Streckenabschnitt_optionalType ;
+    rdfs:range xsd:int .
+
+gdi:wegweisungPropertyType a owl:ObjectProperty ;
+    rdfs:label "WegweisungPropertyType" .
+
+gml:AssociationAttributeGroup a owl:Class .
+
+gml:OwnershipAttributeGroup a owl:Class .
+
+geosparql:Feature a owl:Class ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+gdi:Streckenabschnitt_optional a owl:Class ;
+    rdfs:subClassOf gdi:Streckenabschnitt,
+        gdi:Streckenabschnitt_optionalType .
+
+gdi:TouristenRoute a owl:Class ;
+    rdfs:subClassOf gdi:Route ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( gdi:Route [ a owl:Restriction ;
+                        owl:hasValue true ;
+                        owl:onProperty gdi:istTouristisch ] ) ] .
+
+gdi:Wegweisung a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeature,
+        gdi:WegweisungType .
+
+gdi:hasRoute a owl:ObjectProperty ;
+    rdfs:domain gdi:Streckenabschnitt ;
+    rdfs:range gdi:Route ;
+    owl:inverseOf gdi:hasStreckenabschnitt .
+
+gdi:hasStreckenabschnitt a owl:ObjectProperty ;
+    rdfs:domain gdi:Route ;
+    rdfs:range gdi:Streckenabschnitt .
+
+gdi:istTouristisch a owl:DatatypeProperty ;
+    rdfs:range xsd:boolean .
+
+gdi:knotenPropertyType a owl:ObjectProperty ;
+    rdfs:label "KnotenPropertyType" .
+
+gdi:routePropertyType a owl:ObjectProperty ;
+    rdfs:label "RoutePropertyType" .
+
+gdi:streckenabschnitt_opt_prop a owl:DatatypeProperty .
+
+gdi:streckenabschnitt_prop a owl:DatatypeProperty .
+
+geosparql:SpatialObject a owl:Class .
+
+gdi:Knoten a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeature,
+        gdi:KnotenType .
+
+gdi:beginntBeiKnoten a owl:ObjectProperty ;
+    rdfs:domain gdi:StreckenabschnittType ;
+    rdfs:range gdi:KnotenType .
+
+gdi:endetBeiKnoten a owl:ObjectProperty ;
+    rdfs:domain gdi:StreckenabschnittType ;
+    rdfs:range gdi:KnotenType .
+
+gml-exr:Ortslage a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+xsd:date a rdfs:Datatype .
+
+gml:AbstractFeature a owl:Class ;
+    rdfs:subClassOf geosparql:Feature .
+
+gml:AbstractFeatureType a owl:Class .
+
+gml-exr:Breite_Klasse a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gml-exr:Licht a owl:Class ;
+    rdfs:comment "Beleuchtung"@de ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+balm-code:KommuNetz a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gml-exr:Richtung a owl:Class ;
+    rdfs:comment "Fahrtrichtung"@de ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gdi:Route a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeature,
+        gdi:RouteType .
+
+gdi:Streckenabschnitt a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeature,
+        gdi:StreckenabschnittType ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gdi:hasRoute ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gdi:beginntBeiKnoten ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gdi:endetBeiKnoten ] .
+
+gdi:WegweisungType a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeatureType .
+
+gdi:streckenabschnittPropertyType a owl:ObjectProperty ;
+    rdfs:label "StreckenabschnittPropertyType" .
+
+gdi:streckenabschnitt_optionalPropertyType a owl:ObjectProperty ;
+    rdfs:label "Streckenabschnitt_optionalPropertyType" .
+
+gml-exr:Bewertung a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gdi:Baulast a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gml-exr:Status a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gml:ReferenceType a owl:Class .
+
+<http://www.opengis.net/gml/3.3/exr/TargetCodeList> a owl:Class ;
+    rdfs:label "targetCodeList" .
+
+gdi:KnotenType a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeatureType .
+
+gdi:RouteType a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeatureType .
+
+gdi:StreckenabschnittType a owl:Class ;
+    rdfs:subClassOf gml:AbstractFeatureType .
+
+gml-exr:D-Route a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gdi:Streckenabschnitt_optionalType a owl:Class ;
+    rdfs:subClassOf gdi:StreckenabschnittType .
+
+gml-exr:Belag a owl:Class ;
+    rdfs:comment "Oberflächenart"@de ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
+gml-exr:Fuehrung a owl:Class ;
+    rdfs:subClassOf gml:ReferenceType,
+        <http://www.opengis.net/gml/3.3/exr/TargetCodeList> .
+
