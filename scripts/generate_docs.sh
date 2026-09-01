@@ -4,10 +4,10 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-WIDOCO_VERSION="1.4.21"
+WIDOCO_VERSION="1.4.25"
 WIDOCO_DIR="${REPO_ROOT}/.widoco/bin"
 WIDOCO_JAR="${WIDOCO_DIR}/widoco.jar"
-WIDOCO_URL="https://github.com/dgarijo/Widoco/releases/download/v${WIDOCO_VERSION}/widoco-${WIDOCO_VERSION}-jar-with-dependencies.jar"
+WIDOCO_URL="https://github.com/dgarijo/Widoco/releases/download/v${WIDOCO_VERSION}/widoco-${WIDOCO_VERSION}-jar-with-dependencies_JDK-17.jar"
 
 ONTOLOGY_FILE="${REPO_ROOT}/radnetz_ontology.ttl"
 CONFIG_FILE="${REPO_ROOT}/.widoco/widoco.properties"
@@ -31,7 +31,7 @@ fi
 if [ ! -f "${WIDOCO_JAR}" ]; then
   echo "Downloading WIDOCO v${WIDOCO_VERSION}..."
   mkdir -p "${WIDOCO_DIR}"
-  curl -sSL "${WIDOCO_URL}" -o "${WIDOCO_JAR}"
+  curl -sSfL "${WIDOCO_URL}" -o "${WIDOCO_JAR}"
   echo "Downloaded WIDOCO to ${WIDOCO_JAR}"
 fi
 

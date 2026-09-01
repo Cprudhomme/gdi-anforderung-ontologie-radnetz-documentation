@@ -39,14 +39,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .widoco/bin/widoco.jar
-          key: widoco-1.4.21
+          key: widoco-1.4.25-jdk17
 
       - name: Download WIDOCO
         if: steps.cache-widoco.outputs.cache-hit != 'true'
         run: |
           mkdir -p .widoco/bin
-          WIDOCO_VERSION="1.4.21"
-          curl -sSL "https://github.com/dgarijo/Widoco/releases/download/v${WIDOCO_VERSION}/widoco-${WIDOCO_VERSION}-jar-with-dependencies.jar" -o .widoco/bin/widoco.jar
+          WIDOCO_VERSION="1.4.25"
+          curl -sSfL "https://github.com/dgarijo/Widoco/releases/download/v${WIDOCO_VERSION}/widoco-${WIDOCO_VERSION}-jar-with-dependencies_JDK-17.jar" -o .widoco/bin/widoco.jar
 
       - name: Generate Documentation with WIDOCO
         run: |
