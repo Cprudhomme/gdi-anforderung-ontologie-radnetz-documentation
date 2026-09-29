@@ -13,17 +13,20 @@ ONTOLOGY_FILE="${REPO_ROOT}/radnetz_ontology.ttl"
 CONFIG_FILE="${REPO_ROOT}/.widoco/widoco.properties"
 OUTPUT_DIR="${REPO_ROOT}/docs"
 
-# 1. Check for Java
-if ! command -v java >/dev/null 2>&1; then
-  echo "Error: Java Runtime is not installed or not in PATH."
-  echo "Please install a Java Development Kit (JDK 11+), e.g. via Homebrew: 'brew install openjdk'"
-  exit 1
+# 1. Check for Java / auto-detect on macOS if needed
+if ! command -v java >/dev/null 2>&1 || ! java -version >/dev/null 2>&1; then
+  for jvm in /Library/Java/JavaVirtualMachines/*/Contents/Home; do
+    if [ -x "$jvm/bin/java" ]; then
+      export JAVA_HOME="$jvm"
+      export PATH="$JAVA_HOME/bin:$PATH"
+      break
+    fi
+  done
 fi
 
-# Verify java actually runs
-if ! java -version >/dev/null 2>&1; then
-  echo "Error: Java binary found but no functional Java Runtime located."
-  echo "On macOS, ensure a JDK is installed and configured (e.g. 'brew install openjdk')."
+if ! command -v java >/dev/null 2>&1 || ! java -version >/dev/null 2>&1; then
+  echo "Error: Java Runtime is not installed or not in PATH."
+  echo "Please install a Java Development Kit (JDK 11+), e.g. via Homebrew: 'brew install openjdk'"
   exit 1
 fi
 
@@ -39,14 +42,15 @@ fi
 echo "Generating WIDOCO documentation for radnetz_ontology.ttl..."
 mkdir -p "${OUTPUT_DIR}"
 
-java -Djava.awt.headless=true -jar "${WIDOCO_JAR}" \
+java -Djava.awt.headless=true -Xmx4g -jar "${WIDOCO_JAR}" \
   -ontFile "${ONTOLOGY_FILE}" \
   -outFolder "${OUTPUT_DIR}" \
   -confFile "${CONFIG_FILE}" \
   -rewriteAll \
   -webVowl \
   -lang de-en \
-  -includeAnnotationProperties
+  -includeAnnotationProperties \
+  -ignoreIndividuals "$@"
 
 # If Widoco generated output in a 'doc' subfolder (slash ontologies),
 # bring the files to the root of output folder while keeping doc/ intact

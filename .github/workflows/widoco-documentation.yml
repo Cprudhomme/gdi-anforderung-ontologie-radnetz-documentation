@@ -51,14 +51,15 @@ jobs:
       - name: Generate Documentation with WIDOCO
         run: |
           mkdir -p docs
-          java -Djava.awt.headless=true -jar .widoco/bin/widoco.jar \
+          java -Djava.awt.headless=true -Xmx4g -jar .widoco/bin/widoco.jar \
             -ontFile radnetz_ontology.ttl \
             -outFolder docs \
             -confFile .widoco/widoco.properties \
             -rewriteAll \
             -webVowl \
             -lang de-en \
-            -includeAnnotationProperties
+            -includeAnnotationProperties \
+            -ignoreIndividuals
 
           # If Widoco generated output in a 'doc' subfolder (slash ontologies),
           # bring the files to the root of docs/ while keeping doc/ intact
