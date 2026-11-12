@@ -3,17 +3,17 @@
 Dieses Repository enthält die OWL/RDF-Spezifikation und die automatisierte HTML-Dokumentationspipeline für die **Radnetz-Ontologie** der Geodateninfrastruktur Deutschland (GDI-DE) und des Bundesamtes für Logistik und Mobilität (BALM).
 
 * **Autorin:** Dr. Claire Ponciano
-* **Version:** 2.0.0
+* **Version:** 6.0
 * **Ontologie-Datei:** [`radnetz_ontology.ttl`](radnetz_ontology.ttl)
 * **Live-Dokumentation (GitHub Pages):** [https://cprudhomme.github.io/gdi-anforderung-ontologie-radnetz-documentation/](https://cprudhomme.github.io/gdi-anforderung-ontologie-radnetz-documentation/)
 
 ---
 
-## Funktionen & Neuerungen in v2.0.0
+## Funktionen & Neuerungen in v6.0
 
 * **Harmonisierte UP-3- und GV2Q-Modellierung:** Vollständige Integration des Radnetz-Datenmodells (GDI-DE UP-3) mit den Destatis GV2Q-Verwaltungseinheiten (Bund, Länder, Regierungsbezirke, Regionen, Kreise, Gemeinden und Reisegebiete).
+* **Bereinigung & Expertenprüfung:** Bereinigung nach Qualitätsprüfung, vollständige Anbindung an BALM-Registry, GeoSPARQL, OGC Simple Features, QUDT (Maßeinheiten), W3C Time und INSPIRE Road Transport Network.
 * **OGC GeoSPARQL & INSPIRE Alignment:** Saubere OWL 2 DL Modellierung unter Verwendung von `geosparql:Geometry`, `geosparql:hasGeometry`, `geosparql:wktLiteral` sowie standardisiertem Alignment zu `inspire-tn-ro:*` (Road Transport Network).
-* **Bereinigung von GML/XSD-Artefakten:** Eliminierung redundanter Schemaklassen (z. B. `curvePropertyType`, `pointPropertyType`) zugunsten moderner Linked Open Data Standards.
 * **BALM Codelisten-Anbindung:** Semantische Einbindung der kontrollierten Vokabulare des BALM-Registers (`balm-code:*`) für Oberflächenbelag, Führung, Baulast, Richtung, Beleuchtung und Zustand.
 * **WIDOCO-Dokumentation:** Interaktive HTML-Dokumentation aller Klassen, Objekteigenschaften und Dateneigenschaften.
 * **Bilingual:** Vollständige Unterstützung für Deutsch (`@de`) und Englisch (`@en`).
@@ -38,7 +38,7 @@ Dieses Repository enthält die OWL/RDF-Spezifikation und die automatisierte HTML
 │       └── wuppertal_mapping_report.md # Struktur- und Analysebericht
 ├── scripts/
 │   └── generate_docs.sh                # Lokales Skript zur Dokumentationserstellung
-├── radnetz_ontology.ttl                # Radnetz OWL/Turtle-Ontologiedatei (v2.0.0)
+├── radnetz_ontology.ttl                # Radnetz OWL/Turtle-Ontologiedatei (v6.0)
 ├── .gitignore
 └── README.md
 ```
