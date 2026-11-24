@@ -1,0 +1,176 @@
+@prefix : <https://registry.gdi-de.org/up3/ontology/> .
+@prefix gdi: <https://registry.gdi-de.org/up3/ontology/> .
+@prefix balm-code: <https://registry.gdi-de.org/codelist/de.bund.balm.radnetz/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix inspire-tn-ro: <http://inspire.ec.europa.eu/schemas/tn-ro/4.0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://registry.gdi-de.org/up3/ontology/shapes/> .
+
+<https://registry.gdi-de.org/up3/ontology/shapes/> rdf:type owl:Ontology ;
+    rdfs:label "Radnetz SHACL Validierungs-Shapes v6"@de ,
+               "German Cycling Network SHACL Validation Shapes v6"@en ;
+    owl:versionInfo "6.0" ;
+    dcterms:title "SHACL Shapes für Radnetz Deutschland v6"@de ;
+    dcterms:created "2026-10-20"^^xsd:date .
+
+#################################################################
+#    Knoten Shape (Netzknoten)
+#################################################################
+
+gdi:KnotenShape rdf:type sh:NodeShape ;
+    sh:targetClass gdi:Knoten ;
+    rdfs:label "Shape zur Validierung von Netzknoten"@de ;
+    sh:property [
+        sh:path gdi:knoten-ID ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:name "Knoten-ID"@de ;
+        sh:description "Jeder Netzknoten muss genau eine eindeutige Knoten-ID besitzen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( geosparql:hasGeometry gdi:geometrieKnoten ) ] ;
+        sh:minCount 1 ;
+        sh:class sf:Point ;
+        sh:name "Knotengeometrie"@de ;
+        sh:description "Jeder Netzknoten muss über eine Punktgeometrie (sf:Point) verknüpft sein."@de ;
+    ] ;
+    sh:property [
+        sh:path gdi:hoehe ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:double ;
+        sh:name "Höhe über NHN"@de ;
+        sh:description "Optional geodätische Geländehöhe in Metern als xsd:double."@de ;
+    ] .
+
+#################################################################
+#    Streckenabschnitt Shape
+#################################################################
+
+gdi:StreckenabschnittShape rdf:type sh:NodeShape ;
+    sh:targetClass gdi:Streckenabschnitt ;
+    rdfs:label "Shape zur Validierung von Streckenabschnitten"@de ;
+    sh:property [
+        sh:path gdi:strecken-ID ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:name "Strecken-ID"@de ;
+        sh:description "Jeder Streckenabschnitt muss genau eine eindeutige Strecken-ID besitzen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( geosparql:hasGeometry gdi:geometrieAbschnitt inspire-tn-ro:centrelineGeometry ) ] ;
+        sh:minCount 1 ;
+        sh:class sf:LineString ;
+        sh:name "Streckengeometrie"@de ;
+        sh:description "Jeder Streckenabschnitt muss eine Mittelliniengenetrie (sf:LineString) besitzen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:beginntBeiKnoten inspire-tn-ro:startNode ) ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class gdi:Knoten ;
+        sh:name "Startknoten"@de ;
+        sh:description "Streckenabschnitt muss topologisch an einem Netzknoten beginnen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:endetBeiKnoten inspire-tn-ro:endNode ) ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class gdi:Knoten ;
+        sh:name "Endknoten"@de ;
+        sh:description "Streckenabschnitt muss topologisch an einem Netzknoten enden."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:hatBelag gdi:belag ) ] ;
+        sh:class balm-code:Belag ;
+        sh:name "Belag"@de ;
+        sh:description "Belagsart muss aus der BALM-Codeliste Belag stammen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:hatFuehrung gdi:fuehrung ) ] ;
+        sh:class balm-code:Fuehrung ;
+        sh:name "Führungsform"@de ;
+        sh:description "Führungsform muss aus der BALM-Codeliste Fuehrung stammen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:hatOrtslage gdi:ortslage gdi:orslage ) ] ;
+        sh:class balm-code:Ortslage ;
+        sh:name "Ortslage"@de ;
+        sh:description "Ortslage muss aus der BALM-Codeliste Ortslage stammen."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:istBenutzungspflichtig gdi:b-Pflicht ) ] ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:name "Benutzungspflicht"@de ;
+    ] ;
+    sh:property [
+        sh:path gdi:laenge ;
+        sh:or (
+            [ sh:datatype xsd:integer ]
+            [ sh:datatype xsd:double ]
+        ) ;
+        sh:name "Länge in Metern"@de ;
+    ] ;
+    sh:property [
+        sh:path gdi:steigung ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:double ;
+        sh:name "Steigung in Prozent"@de ;
+    ] .
+
+#################################################################
+#    Route Shape
+#################################################################
+
+gdi:RouteShape rdf:type sh:NodeShape ;
+    sh:targetClass gdi:Route ;
+    rdfs:label "Shape zur Validierung von Radrouten"@de ;
+    sh:property [
+        sh:path gdi:routen-ID ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:name "Routen-ID"@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:hatStreckenabschnitt gdi:hasStreckenabschnitt ) ] ;
+        sh:minCount 1 ;
+        sh:class gdi:Streckenabschnitt ;
+        sh:name "Streckenabschnitte"@de ;
+        sh:description "Eine Route muss mindestens einen Streckenabschnitt enthalten."@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:istEuroVelo gdi:euroVelo ) ] ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:name "EuroVelo-Status"@de ;
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( gdi:istRadnetzD gdi:radnetz_D ) ] ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:name "Radnetz D-Status"@de ;
+    ] .
+
+#################################################################
+#    Geometrie WKT Shape
+#################################################################
+
+gdi:GeometryShape rdf:type sh:NodeShape ;
+    sh:targetClass geosparql:Geometry ;
+    rdfs:label "Shape zur Validierung von GeoSPARQL-Geometrien"@de ;
+    sh:property [
+        sh:path geosparql:asWKT ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype geosparql:wktLiteral ;
+        sh:name "WKT-Literal"@de ;
+        sh:description "Geometrien müssen über ein gültiges WKT-Literal verfügen."@de ;
+    ] .
